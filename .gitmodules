@@ -1,11 +1,11 @@
-[submodule "Kickstart.nvim"]
-	path = .config/nvim/
+[submodule ".config/nvim"]
+	path = .config/nvim
 	url = https://github.com/GiovanniKarra/kickstart.nvim
 
-[submodule "Pure"]
-	path = .zsh/pure/
+[submodule ".zsh/pure"]
+	path = .zsh/pure
 	url = https://github.com/sindresorhus/pure
 
-[submodule "omz"]
-	path = .oh-my-zsh/
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
