@@ -1,0 +1,11 @@
+[user]
+	email = karragiovanni@gmail.com
+	name = Giovanni Karra
+[init]
+	defaultBranch = main
+[advice]
+	addIgnoredFile = false
+[pull]
+	rebase = true
+[core]
+	editor = nvim

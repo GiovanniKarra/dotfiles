@@ -1,0 +1,106 @@
+/*------------------Configuration-------------------------*/
+configuration {
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+}
+
+
+/*------------------Font-------------------------*/
+//@import "~/.config/rofi/colors-rofi-dark.rasi"
+* {
+    font: "JetBrainsMono 12";
+}
+
+
+/*------------------WINDOW-------------------------*/
+window {
+    width: 500px;
+
+    border: 2px solid;
+    border-color: @foreground;
+    border-radius: 20px;
+
+    background-color: @background;
+    padding: 0px;
+}
+
+
+/*------------------Main container-------------------------*/
+mainbox {
+    spacing: 10px;
+    padding: 20px;
+    children: [ "inputbar", "listview" ];
+}
+
+
+/*------------------Inputbar-------------------------*/
+
+/*-Inputbar container-*/
+inputbar {
+    spacing: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: @foreground;
+    text-color: @background;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+/*-Icons-*/
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+/*-Prompt-*/
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    placeholder: "Entry";
+    placeholder-color: inherit;
+}
+
+/*-----------------Elements list-------------------------*/
+listview {
+    columns: 1;
+    lines: 6;
+    scrollbar: true;
+    spacing: 10px;
+    text-color: @foreground;
+    background-color: @background;
+}
+
+
+/*------------------Elements-------------------------*/
+element {
+    spacing: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element.normal.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element.selected.normal {
+    background-color: @foreground;
+    text-color: @background;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 32px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:  inherit;
+    vertical-align: 0.5;
+}
+
