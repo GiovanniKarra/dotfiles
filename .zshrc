@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -115,6 +115,3 @@ if [ -s "$HOME/.nvm/nvm.sh" ]; then
   alias node='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && node'
   alias npm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && npm'
 fi
-
-TERMINAL=wezterm
-EDITOR=nvim
