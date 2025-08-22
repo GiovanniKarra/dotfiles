@@ -25,5 +25,8 @@ config.keys = {
     action = wezterm.action.SendKey {key = 'w', mods = 'CTRL'},
   },
 }
+
+config.audible_bell = "Disabled"
+
 -- and finally, return the configuration to wezterm
 return config

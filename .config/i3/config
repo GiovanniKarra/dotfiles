@@ -187,11 +187,14 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl -d amdgpu_bl2 s +2.5% # increase screen brightness
-bindsym XF86MonBrightnessDown exec brightnessctl -d amdgpu_bl2 s 2.5%- # decrease screen brightness
+set $device "amdgpu_bl1"
+#set $device $BACKLIGHT_DEVICE
 
-bindsym Shift+XF86MonBrightnessUp exec brightnessctl -d amdgpu_bl2 s +5% # increase screen brightness
-bindsym Shift+XF86MonBrightnessDown exec brightnessctl -d amdgpu_bl2 s 5%- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl -d $device s +2.5% # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -d $device s 2.5%- # decrease screen brightness
+
+bindsym Shift+XF86MonBrightnessUp exec brightnessctl -d $device s +5% # increase screen brightness
+bindsym Shift+XF86MonBrightnessDown exec brightnessctl -d $device s 5%- # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec toggletouchpad.sh # toggle touchpad
@@ -211,7 +214,7 @@ bindsym Shift+Print exec gnome-screenshot -a
 bindsym Ctrl+Shift+Print exec gnome-screenshot -acf /tmp/screenshot && cat /tmp/screenshot | xclip -i -selection clipboard -target image/png
 bindsym Ctrl+Print exec gnome-screenshot -cf /tmp/screenshot && cat /tmp/screenshot | xclip -i -selection clipboard -target image/png
 
-exec --no-startup-id redshift -t 4500:3000 -l 50.45413:3.95229 
+exec --no-startup-id redshift -t 4250:3000 -l 50.45413:3.95229 
 #exec --no-startup-id redshift -t 4500:3000 -l 34.05:-118.25
 
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
@@ -229,6 +232,7 @@ for_window [class="Gnome-screenshot"] floating enable
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="floating"] floating enable
+for_window [instance="Godot_Engine"] floating enable
 
 exec_always --no-startup-id "xmodmap ~/.Xmodmap"
 

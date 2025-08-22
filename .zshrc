@@ -108,6 +108,7 @@ fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
+path=("/home/giogio/.nvm/versions/node/v22.5.1/bin" $path)
 if [ -s "$HOME/.nvm/nvm.sh" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
@@ -118,3 +119,15 @@ fi
 
 TERMINAL=wezterm
 EDITOR=nvim
+BACKLIGHT_DEVICE=`backlight-dev`
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/giogio/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
+
+PATH="/usr/local/go/bin":"/home/giogio/go/bin":$PATH
