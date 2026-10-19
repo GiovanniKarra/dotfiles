@@ -7,5 +7,8 @@ return {
 		vim.lsp.enable("gopls"),
 		vim.lsp.enable("rust_analyzer"),
 		vim.lsp.enable("julials"),
+		vim.lsp.enable("texlab"),
+		vim.lsp.enable("html"),
+		vim.lsp.enable("htmx"),
 	}
 }

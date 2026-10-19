@@ -215,7 +215,7 @@ bindsym Ctrl+Shift+Print exec gnome-screenshot -acf /tmp/screenshot && cat /tmp/
 bindsym Ctrl+Print exec gnome-screenshot -cf /tmp/screenshot && cat /tmp/screenshot | xclip -i -selection clipboard -target image/png
 
 exec --no-startup-id redshift -t 4250:3000 -l 50.45413:3.95229 
-#exec --no-startup-id redshift -t 4500:3000 -l 34.05:-118.25
+# exec --no-startup-id redshift -t 4250:3000 -l 34.05:-118.25
 
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 

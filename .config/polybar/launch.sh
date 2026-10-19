@@ -1,4 +1,4 @@
-!#/usr/bin/env sh
+#!/usr/bin/env sh
 
 pkill polybar && while pgrep polybar; do sleep 1;done;
 

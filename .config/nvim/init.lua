@@ -5,16 +5,18 @@ vim.cmd("colorscheme onedark_vivid")
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.smartindent = true
-vim.opt.expandtab = false
 
 vim.diagnostic.enable = true
 vim.diagnostic.config({
 	virtual_text = true
 })
+
+vim.keymap.set("n", "µ", "`")
 
 vim.opt.completeopt = {"noinsert", "menu", "menuone"}
 local chars = {}
@@ -44,3 +46,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	})
   end
 })
+
+
+vim.opt.colorcolumn = "80,100"

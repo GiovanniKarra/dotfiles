@@ -127,7 +127,10 @@ BACKLIGHT_DEVICE=`backlight-dev`
 
 path=('/home/giogio/.juliaup/bin' $path)
 export PATH
+# Tab completion for juliaup and julia channel selection
+[ -f "/home/giogio/.julia/juliaup/completions/zsh.zsh" ] && source "/home/giogio/.julia/juliaup/completions/zsh.zsh"
 
 # <<< juliaup initialize <<<
 
 PATH="/usr/local/go/bin":"/home/giogio/go/bin":$PATH
+
