@@ -11,7 +11,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 0
 vim.opt.smartindent = true
 
-vim.diagnostic.enable = true
+vim.diagnostic.enable(true)
 vim.diagnostic.config({
 	virtual_text = true
 })
@@ -47,5 +47,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end
 })
 
-
 vim.opt.colorcolumn = "80,100"
+
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function(ev) pcall(vim.treesitter.start, ev.buf) end,
+})

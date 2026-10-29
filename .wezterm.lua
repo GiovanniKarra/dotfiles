@@ -7,6 +7,18 @@ local config = wezterm.config_builder()
 config.color_scheme = 'Google Dark (Gogh)'
 config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 14
+config.font_rules = {
+  {
+    intensity = 'Bold',
+    italic = false,
+    font = wezterm.font('JetBrains Mono', { weight = 'Bold' }),
+  },
+  {
+    intensity = 'Bold',
+    italic = true,
+    font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true }),
+  },
+}
 
 config.window_background_opacity = 0.9
 
@@ -28,5 +40,9 @@ config.keys = {
 
 config.audible_bell = "Disabled"
 
+config.front_end = "WebGpu"
+config.webgpu_power_preference = "HighPerformance"
+
 -- and finally, return the configuration to wezterm
 return config
+
